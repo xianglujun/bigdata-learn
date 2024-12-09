@@ -56,7 +56,7 @@ public class FofSecondPhaseMain {
         // 设置reducer的相关
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
-//        job.setSortComparatorClass(FofSecondPhaseDataModel.Comparator.class);
+        job.setSortComparatorClass(FofSecondPhaseSortComparator.class);
         job.setPartitionerClass(FosSecondPhasePartitioner.class);
         // todo 当mapper和reduce的输出key和value都相同时，对于reducer的设置可以省略
 
