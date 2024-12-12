@@ -21,6 +21,7 @@
 
     <modules>
         <module>hedoop-learn</module>
+        <module>hive-learn</module>
     </modules>
 
 </project>
