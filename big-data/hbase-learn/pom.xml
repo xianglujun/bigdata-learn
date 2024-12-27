@@ -2,16 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.hadoop.learn</groupId>
-        <artifactId>bigdata-learn</artifactId>
+        <artifactId>big-data</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>big-data</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>hbase-learn</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -19,10 +18,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <modules>
-        <module>hedoop-learn</module>
-        <module>hive-learn</module>
-        <module>hbase-learn</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>2.0.6</version>
+        </dependency>
+    </dependencies>
 
 </project>
