@@ -1,0 +1,20 @@
+// 指定proto版本
+syntax = "proto2";
+package org.hadoop.learn.phone.log;
+
+// 指定输出的文件名称
+option java_outer_classname = "PhoneInfoProto";
+option java_package = "org.hadoop.learn.phone.log";
+// 是否生成equals和hash的方法
+option java_generate_equals_and_hash = true;
+// 是否生成多文件
+option java_multiple_files = true;
+/**
+定义手机通话信息
+ */
+message PhoneInfo {
+  required string snum = 1;
+  required string rnum = 2;
+  required int64 seconds = 3;
+  required string datetime = 4;
+}
