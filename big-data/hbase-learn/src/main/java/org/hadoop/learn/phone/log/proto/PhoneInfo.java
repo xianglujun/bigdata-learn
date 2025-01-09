@@ -19,15 +19,15 @@ public final class PhoneInfo extends
         PhoneInfoOrBuilder {
     private static final long serialVersionUID = 0L;
 
-    static {
-        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-                com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-                /* major= */ 4,
-                /* minor= */ 29,
-                /* patch= */ 2,
-                /* suffix= */ "",
-                PhoneInfo.class.getName());
-    }
+//    static {
+//        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+//                com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+//                /* major= */ 4,
+//                /* minor= */ 29,
+//                /* patch= */ 2,
+//                /* suffix= */ "",
+//                PhoneInfo.class.getName());
+//    }
 
     // Use PhoneInfo.newBuilder() to construct.
     private PhoneInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {

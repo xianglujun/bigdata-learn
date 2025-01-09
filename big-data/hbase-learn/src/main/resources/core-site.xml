@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License. See accompanying LICENSE file.
+-->
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<!-- 指定访问HDFS的时候路径的默认前缀 / hdfs://localhost:9000 -->
+	<property>
+		<name>fs.defaultFS</name>
+		<!-- 在高可用模式下，不能写单独的namenode的路径，而是需要以集群的方式配置和访问  -->
+		<!--<value>hdfs://192.168.56.102:9000</value>-->
+		<value>hdfs://mycluster</value>
+	</property>
+	<!-- 指定hadoop的临时目录位置，他会给namenode, secondarynamenode以及datanode的存储目录指定前缀  -->
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/opt/apps/hadoop/hadoop-2.6.5/ha</value>
+	</property>
+	<!-- 指定每个zookeeper服务器的位置和客户端编号  -->
+	<property>
+		<name>ha.zookeeper.quorum</name>
+		<value>192.168.56.102:2181,192.168.56.103:2181,192.168.56.104:2181</value>
+	</property>
+</configuration>

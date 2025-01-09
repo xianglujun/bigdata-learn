@@ -1,5 +1,5 @@
 // 指定proto版本
-syntax = "proto2";
+//syntax = "proto1";
 package org.hadoop.learn.phone.log;
 
 // 指定输出的文件名称
